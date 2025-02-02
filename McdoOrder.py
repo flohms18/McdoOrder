@@ -25,6 +25,8 @@ def SandwichOrder():
         SideOrder()
     else:
         print("Ok! Your order is: ", UserOrder)
+        print("Thank you for ordering! Have a great day!")
+
 
 def SideOrder():
         print(SideMenu)
@@ -37,7 +39,6 @@ def SideOrder():
             UserOrder.append(SideMenu[1].replace("2.", ""))
             print("You have ordered Potatoes")
             
-
 
 def Order():
     print("Welcome to Mcdonald's! ")
