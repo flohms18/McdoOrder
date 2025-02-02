@@ -34,7 +34,7 @@ def UserOrder():
         if UserSandwich == "4":
             UserOrder.append(SandwichMenu[3].replace("4.", ""))
         if UserSandwich == "5":
-            UserOrder.append(SandwichMenu[4].replace(".", ""))
+            UserOrder.append(SandwichMenu[4].replace("5.", ""))
         if menu == "N":
             print("Ok Greats! Here is our products list instead: ")
     if order == "N":
