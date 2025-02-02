@@ -36,7 +36,11 @@ def UserOrder():
         if UserSandwich == "5":
             UserOrder.append(SandwichMenu[4].replace("5.", ""))
         if menu == "N":
+            Products = []
+            Products.append(SandwichMenu.replace("1.", ""), SandwichMenu.replace("2.", ""), SandwichMenu.replace("3.", ""), SandwichMenu.replace("4.", ""), SandwichMenu.replace("5.", ""))
+            Products.append(SideMenu.replace("1.", ""), SideMenu.replace("2.", ""))
             print("Ok Greats! Here is our products list instead: ")
+            print(Products)
     if order == "N":
         print("Ok! Have a great day!")
 
