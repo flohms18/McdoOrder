@@ -32,12 +32,11 @@ def SideOrder():
         if UserSide == "1":
             UserOrder.append(SideMenu[0].replace("1.", ""))
             print("You have ordered Fries")
-            print("Ok! Your order is: ", UserOrder)
 
         if UserSide == "2":
             UserOrder.append(SideMenu[1].replace("2.", ""))
             print("You have ordered Potatoes")
-            print("Ok! Your order is: ", UserOrder)
+            
 
 
 def Order():
@@ -53,6 +52,9 @@ def Order():
             print(Products)
     if order == "N":
         print("Ok! Have a great day!")
+    if len(UserOrder) == 2:
+        print("Ok! Your order is: ", UserOrder)
+        print("Thank you for ordering! Have a great day!")
 
 
 Order()
