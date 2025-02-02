@@ -8,8 +8,18 @@ def UserOrder():
         print("Ok! Let me show you our menu:")
         print(SandwichMenu)
         UserSandwich = input("What sandwich would you like to order? ")
-        if menu == "Y":
-            print("Ok Greats! Here is our menu:")
+        if UserSandwich == "1":
+            UserOrder.append(SandwichMenu[0].replace("1.", ""))
+            print("You have ordered a Big Mac")
+            print("Your order is: ", UserOrder)
+        if UserSandwich == "2":
+            UserOrder.append(SandwichMenu[1].replace("2.", ""))
+        if UserSandwich == "3":
+            UserOrder.append(SandwichMenu[2].replace("3.", ""))
+        if UserSandwich == "4":
+            UserOrder.append(SandwichMenu[3].replace("4.", ""))
+        if UserSandwich == "5":
+            UserOrder.append(SandwichMenu[4].replace("5.", ""))
         if menu == "N":
             print("Ok Greats! Here is our products list instead: ")
     if order == "N":
