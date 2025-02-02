@@ -1,15 +1,13 @@
 def UserOrder():
-    Sandwichmenu = ["Big Mac", "Cheeseburger","CBO","MCChicken","Filet-O-Fish"]
+    SandwichMenu = ["1.Big Mac", "2.Cheeseburger","3.CBO","4.MCChicken","5.Filet-O-Fish"]
     UserOrder = []
     print("Welcome to Mcdonald's! What would you like to order? ")
     order = input("Would you like to order? (Y/N): ")
     if order == "Y":
         menu = input("Would you like to order a menu? (Y/N): ")
         print("Ok! Let me show you our menu:")
-        print(menu)
+        print(SandwichMenu)
         UserSandwich = input("What sandwich would you like to order? ")
-
-        
         if menu == "Y":
             print("Ok Greats! Here is our menu:")
         if menu == "N":
