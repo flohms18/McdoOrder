@@ -44,11 +44,13 @@ def Order():
     print("Welcome to Mcdonald's! ")
     order = input("Would you like to order? (Y/N): ")
     if order == "Y":
-        SandwichOrder()
-        if order == "N":
-            Products = []
-            Products.append(SandwichMenu.replace("1.", ""), SandwichMenu.replace("2.", ""), SandwichMenu.replace("3.", ""), SandwichMenu.replace("4.", ""), SandwichMenu.replace("5.", ""))
-            Products.append(SideMenu.replace("1.", ""), SideMenu.replace("2.", ""))
+        menu = input("Would you like to see our menu? (Y/N): ")
+        if menu == "Y":
+            SandwichOrder()
+        if menu == "N":
+            Products = SandwichMenu + SideMenu
+            Products[5] = Products[5].replace("1.", "6.")
+            Products[6] = Products[6].replace("2.", "7.")
             print("Ok Greats! Here is our products list instead: ")
             print(Products)
     if order == "N":
