@@ -2,6 +2,15 @@ SandwichMenu = ["1.Big Mac", "2.Cheeseburger","3.CBO","4.MCChicken","5.Filet-O-F
 SideMenu = ["1.Fries","2.Potatoes"]
 UserOrder = []
 
+def SummaryOrder():
+    print("Your order is: ", UserOrder)
+    AdditionalOrder = input("Would you like to add more to your order? (Y/N): ")
+    if AdditionalOrder == "Y":
+        SandwichOrder()
+    if AdditionalOrder == "N":
+        print("Ok! Your order is: ", UserOrder)
+        print("Ok! Have a great day!")   
+
 def SandwichOrder():
     print(SandwichMenu)
     UserSandwich = input("What sandwich would you like to order? ")
@@ -34,10 +43,12 @@ def SideOrder():
         if UserSide == "1":
             UserOrder.append(SideMenu[0].replace("1.", ""))
             print("You have ordered Fries")
+            SummaryOrder()
 
         if UserSide == "2":
             UserOrder.append(SideMenu[1].replace("2.", ""))
             print("You have ordered Potatoes")
+            SummaryOrder()
             
 
 def Order():
@@ -53,6 +64,21 @@ def Order():
             Products[6] = Products[6].replace("2.", "7.")
             print("Ok Greats! Here is our products list instead: ")
             print(Products)
+            OrderProduct = input("Pick a product from the list: ")
+            if OrderProduct == "1": 
+                print("You have ordered a Big Mac")
+            if OrderProduct == "2":
+                print("You have ordered a Cheeseburger")
+            if OrderProduct == "3":
+                print("You have ordered a CBO")
+            if OrderProduct == "4":
+                print("You have ordered a MCChicken")
+            if OrderProduct == "5":
+                print("You have ordered a Filet-O-Fish")
+            if OrderProduct == "6": 
+                print("You have ordered Fries")
+            if OrderProduct == "7":
+                print("You have ordered Potatoes")     
     if order == "N":
         print("Ok! Have a great day!")
     if len(UserOrder) == 2:
