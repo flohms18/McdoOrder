@@ -1,3 +1,5 @@
+import random
+
 SandwichMenu = ["1.Big Mac", "2.Cheeseburger","3.CBO","4.MCChicken","5.Filet-O-Fish"]
 SideMenu = ["1.Fries","2.Potatoes"]
 UserOrder = []
@@ -9,7 +11,8 @@ def SummaryOrder():
         SandwichOrder()
     if AdditionalOrder == "N":
         print("Ok! Your order is: ", UserOrder)
-        print("Ok! Have a great day!")   
+        NumberOrder = random.randint(10,100)
+        print("Your order number is: ", NumberOrder)
 
 def SandwichOrder():
     print(SandwichMenu)
@@ -52,7 +55,6 @@ def SideOrder():
             
 
 def Order():
-    print("Welcome to Mcdonald's! ")
     order = input("Would you like to order? (Y/N): ")
     if order == "Y":
         menu = input("Would you like to see our menu? (Y/N): ")
@@ -86,10 +88,26 @@ def Order():
         print("Thank you for ordering! Have a great day!")
 
 
-Order()
+def TakeAwayorEatin():
+    TakeAway = input("Would you like to take away or eat in? (T/E): ")
+    if TakeAway == "T":
+        print("Ok! Your order is for take away. ")
+        Order()
+    if TakeAway == "E":
+        print("Ok! Your order is for eat in. ")
+        Order()
 
+def CashorCard():
+    print("Welcome to Mcdonald's! ")
+    Payment = input("Would you like to pay by cash or card? (C/D): ")
+    if Payment == "C":
+        print("Ok! Your payment is by cash. ")
+        TakeAwayorEatin()
+    if Payment == "D":
+        print("Ok! Your payment is by card. ")
+        TakeAwayorEatin()
 
-
+CashorCard()
 
 
 
